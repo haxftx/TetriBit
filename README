@@ -1,0 +1,29 @@
+TetriBit: jocul tetris pe biti, harta este pe 64 biti(8x8),
+piesele pot fi rotite si is de 4 tipuri(un bit, 2 biti, 3 biti forma L, si 
+patru 4, toti alaturati), fiecare piesa are cate o mutare petru fiecare linie
+numar negativ in stanga, pozitiv in dreapta, in timpul unei coliziuni piesa
+nu mai executa nici o miscare se trece la urmatoare piesa, liniile complete
+sunt eliminate de pe harta, jocul se termina odata cu piesele sau cand
+urmatoarea piesa nu incape pe harta, scorul se calculeaza dupa formula
+sqrt(biti setati cu 0) * pow(1.25, numarul de linii eliminate).
+
+Input:
+Harta
+Numrul_de_piese
+Piesa miscare1 ... miscare8
+
+Implementarea:
+1.citesc datele de intrare;
+2.afisez harta initiala;
+3.se citeste piesa cu mutarile ei intr-un vector;
+4.citesc pentru fiecare piesa miscarile;
+5.verific daca nu-i coliziune pe harta cu piesa;
+6.aleg mutarile spre dreapta sau stinga;
+7.am elaborat 2 functii recursive petru shiftari;
+8.afisez fiecare mutare a piesei pe harta;
+9.dupa toate mutarile posibile adaug piesa la harta;
+10.verific de linii complete si le elimin daca este cazul;
+11.calculez bitii nesetati;
+12.implementez formula pentru scor;
+13.sfarsit de joc;
+# TetriBit
